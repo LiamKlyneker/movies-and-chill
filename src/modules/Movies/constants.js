@@ -1,5 +1,6 @@
 export const MOVIES_GET_MOVIES_BY_SEARCH = 'MOVIES_GET_MOVIES_BY_SEARCH';
 export const MOVIES_GET_DETAIL = 'MOVIES_GET_DETAIL';
+export const MOVIES_GET_CREDITS = 'MOVIES_GET_CREDITS';
 
 // Key Store
 export const MOVIES = 'movies';

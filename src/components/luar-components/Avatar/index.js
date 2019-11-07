@@ -4,7 +4,7 @@ import cx from 'classnames';
 const Avatar = ({ src, theme }) => {
   return (
     <figure className={cx({ 'avatar-profile': !theme, [`avatar-${theme}`]: theme })}>
-      <img src={src} alt="avatar" />
+      <img src={!theme ? src : `http://image.tmdb.org/t/p/original${src}`} alt="avatar" />
     </figure>
   );
 };

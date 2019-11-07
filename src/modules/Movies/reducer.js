@@ -1,5 +1,9 @@
 import { success } from '#modules/utils';
-import { MOVIES_GET_MOVIES_BY_SEARCH, MOVIES_GET_DETAIL } from './constants';
+import {
+  MOVIES_GET_MOVIES_BY_SEARCH,
+  MOVIES_GET_DETAIL,
+  MOVIES_GET_CREDITS,
+} from './constants';
 
 const defaultState = {
   moviesSearchList: {
@@ -9,6 +13,10 @@ const defaultState = {
     list: [],
   },
   movieDetail: {
+    isFetching: true,
+    info: {},
+  },
+  movieCredits: {
     isFetching: true,
     info: {},
   },
@@ -52,6 +60,24 @@ const reducer = (state = defaultState, { type, payload }) => {
         ...state,
         movieDetail: {
           ...state.movieDetail,
+          isFetching: false,
+          info: payload.data,
+        },
+      };
+
+    case MOVIES_GET_CREDITS:
+      return {
+        ...state,
+        movieCredits: {
+          ...state.movieCredits,
+          isFetching: true,
+        },
+      };
+    case success(MOVIES_GET_CREDITS):
+      return {
+        ...state,
+        movieCredits: {
+          ...state.movieCredits,
           isFetching: false,
           info: payload.data,
         },
