@@ -1,0 +1,26 @@
+.character-picture {
+  height: 384px;
+  background-color: rgba($luar_blue, .05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  span {
+    background-color: rgba(black, .8);
+    padding: .5rem 1rem;
+    padding-top: .7rem;
+    border-radius: 24px;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.4;
+  }
+}
+@media all and (min-width: 700px) {
+  .character-picture {
+    height: 498px;
+    box-shadow: 0 8px 16px rgba(black, .1);
+  }
+}

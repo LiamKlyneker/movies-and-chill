@@ -1,0 +1,33 @@
+.characterHeader {
+  padding: 0 2rem;
+  display: flex;
+  margin-bottom: 1.25rem;
+}
+
+.characterDetails {
+  padding: 2rem;
+}
+
+@media all and (min-width: 700px) {
+  .mainContainer {
+    display: flex;
+  }
+  .desktopLeftSide, .desktopRightSide {
+    flex: 1;
+  }
+  .desktopLeftSide {
+    max-width: 486px;
+  }
+  .desktopRightSide {
+    padding-left: 4rem;
+  }
+
+  .characterHeader {
+    position: relative;
+    a {
+      position: absolute;
+      left: 0;
+      top: 1px;
+    }
+  }
+}
