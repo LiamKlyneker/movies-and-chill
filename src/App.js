@@ -6,6 +6,7 @@ import configureStore from './modules/makeStore';
 
 import MainHeader from '#components/header';
 import HomePage from '#pages/home';
+import MovieDetail from '#pages/movie-detail';
 
 import './scss/default.scss';
 
@@ -16,6 +17,7 @@ function App() {
       <MainHeader />
       <Router>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/movie/:movieId" component={MovieDetail} />
       </Router>
     </ReduxProvider>
   );

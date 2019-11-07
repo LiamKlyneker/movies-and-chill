@@ -25,3 +25,38 @@ main {
 		padding: 0 2rem;
 	}
 }
+
+.detailPageHeader {
+  padding: 0 2rem;
+  display: flex;
+  margin-bottom: 1.25rem;
+}
+
+.detailPageInfo {
+  padding: 2rem;
+}
+
+@media all and (min-width: 700px) {
+  .detailPageMainContainer {
+    display: flex;
+  }
+  .detailPageDesktopLeftSide, .detailPageDesktopRightSide {
+    flex: 1;
+  }
+  .detailPageDesktopLeftSide {
+    max-width: 486px;
+  }
+  .detailPageDesktopRightSide {
+    padding-left: 4rem;
+  }
+
+  .detailPageHeader {
+    position: relative;
+    a {
+      position: absolute;
+      left: 0;
+      top: 1px;
+    }
+  }
+}
+
