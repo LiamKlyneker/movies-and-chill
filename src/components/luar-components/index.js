@@ -11,3 +11,4 @@ export { default as Strong } from './Strong';
 export { default as Picture } from './Picture';
 export { default as Heading } from './Heading';
 export { default as Divider } from './Divider';
+export { default as SearchInput } from './SearchInput';

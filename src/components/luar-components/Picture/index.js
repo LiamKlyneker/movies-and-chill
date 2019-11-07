@@ -1,14 +1,13 @@
 import React from 'react';
 import cx from 'classnames';
 
-const Picture = ({ theme }) => {
+import { baseUrl, apiKey } from '#services/api';
+
+const Picture = ({ theme, source }) => {
   return (
-    <div className={cx(theme)}>
-      <span>
-        CHARACTER PICTURES ONLY AVAILABLE FOR <br />
-        PREMIUM USERS
-      </span>
-    </div>
+    <figure className={cx('picture', { [theme]: theme })}>
+      <img alt={theme} src={`http://image.tmdb.org/t/p/original${source}`} />
+    </figure>
   );
 };
 

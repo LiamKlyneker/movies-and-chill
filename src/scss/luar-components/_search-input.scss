@@ -1,0 +1,41 @@
+.searchInputWrapper {
+  position: relative;
+  input {
+    -webkit-appearance: none;
+    outline: none;
+    border: 0;
+    height: 40px;
+    border-bottom: 2px solid $grey_text_2;
+    font-size: 18px;
+    width: 100%;
+    font-weight: 300;
+  }
+  input:focus {
+    border-bottom-color: $luar_pink;
+  }
+  button {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: $grey_text_2;
+    padding-right: 0;
+    cursor: pointer;
+  }
+  button:hover {
+    color: $luar_blue;
+  }
+}
+
+@media all and (min-width: 700px) {
+  .searchInputWrapper {
+    input {
+      font-size: 24px;
+      height: 60px;
+    }
+  }
+}

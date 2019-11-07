@@ -5,7 +5,7 @@ import { Provider as ReduxProvider } from 'react-redux';
 import configureStore from './modules/makeStore';
 
 import MainHeader from '#components/header';
-import WelcomePage from '#pages/welcome';
+import HomePage from '#pages/home';
 
 import './scss/default.scss';
 
@@ -15,7 +15,7 @@ function App() {
     <ReduxProvider store={reduxStore}>
       <MainHeader />
       <Router>
-        <Route exact path="/" component={WelcomePage} />
+        <Route exact path="/" component={HomePage} />
       </Router>
     </ReduxProvider>
   );
