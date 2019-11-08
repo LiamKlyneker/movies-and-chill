@@ -1,17 +1,16 @@
 import React from 'react';
 import cx from 'classnames';
-import { Link } from 'react-router-dom';
-import { Heading, Label } from 'luar-components';
+import { useHistory } from 'react-router-dom';
+import { Heading, Label, Icon } from 'luar-components';
 
 const DetailPageHeader = ({ personInfo }) => {
+  const history = useHistory();
   return (
     <div className={cx('detailPageHeader')}>
       <div>
-        <Link to="/">
-          <span role="img" aria-label="Back">
-            🔙
-          </span>
-        </Link>
+        <button onClick={() => history.goBack()}>
+          <Icon icon="keyboard_backspace" />
+        </button>
       </div>
       <div>
         <Heading as="h3">{personInfo.name}</Heading>

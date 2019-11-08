@@ -5,6 +5,7 @@ import cx from 'classnames';
 
 import { Loader } from 'luar-components';
 import MovieTile from './movie-tile';
+import EmptyState from './empty-state';
 
 import styles from './styles.module.scss';
 
@@ -12,7 +13,7 @@ import { selectMoviesData } from '#modules/Movies/selectors';
 
 const ResultsSection = () => {
   /* Selectors */
-  const { moviesSearchList } = useSelector(selectMoviesData());
+  const { moviesSearchList, currentSearchText } = useSelector(selectMoviesData());
   const history = useHistory();
 
   /* Methods */
@@ -30,6 +31,9 @@ const ResultsSection = () => {
           ))}
         </section>
       )}
+      {!moviesSearchList.isFetching &&
+        moviesSearchList.list.length === 0 &&
+        currentSearchText && <EmptyState searchText={currentSearchText} />}
     </>
   );
 };

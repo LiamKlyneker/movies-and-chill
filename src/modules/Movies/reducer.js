@@ -20,6 +20,7 @@ const defaultState = {
     isFetching: true,
     info: {},
   },
+  currentSearchText: '',
 };
 
 const reducer = (state = defaultState, { type, payload }) => {
@@ -45,6 +46,7 @@ const reducer = (state = defaultState, { type, payload }) => {
           },
           list: payload.data.results,
         },
+        currentSearchText: payload.config.params.query,
       };
 
     case MOVIES_GET_DETAIL:

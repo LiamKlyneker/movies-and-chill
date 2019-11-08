@@ -8,6 +8,7 @@ const SearchInput = ({ placeholder, value, onChange, performSearch }) => {
         placeholder={placeholder}
         value={value}
         onChange={event => onChange(event.target.value)}
+        onKeyDown={event => event.key === 'Enter' && performSearch()}
       />
       {value && <button onClick={performSearch}>SEARCH</button>}
     </div>
