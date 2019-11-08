@@ -1,4 +1,5 @@
 export const PERSONS_GET_DETAIL_PERSON = 'PERSONS_GET_DETAIL_PERSON';
+export const PERSONS_GET_MOVIE_CREDITS = 'PERSONS_GET_MOVIE_CREDITS';
 
 // Key Store
 export const PERSONS = 'persons';

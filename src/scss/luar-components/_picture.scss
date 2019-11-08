@@ -13,3 +13,19 @@
     width: 100%;
   }
 }
+
+.movie-tile-small {
+  width: 100%;
+  margin: 0;
+  min-height: 295px;
+  max-height: 295px;
+  background-color: $black_text;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  img {
+    width: 100%;
+  }
+}

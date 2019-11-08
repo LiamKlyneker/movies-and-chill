@@ -6,11 +6,12 @@ import cx from 'classnames';
 import { Picture, Loader } from 'luar-components';
 import DetailPageHeader from './components/detail-page-header';
 import DetailPageInfo from './components/detail-page-info';
-// import CastList from './components/cast-list';
+import MoviesList from './components/movies-list';
 
 import { useActions } from '#utils';
 import { selectPersonData } from '#modules/Persons/selectors';
 import { getPersonDetail } from '#modules/Persons/actions';
+import { getPersonMovieCredits } from '#modules/Persons/actions';
 
 const ActorDetailPage = () => {
   // Selectors
@@ -18,17 +19,21 @@ const ActorDetailPage = () => {
   const { personDetail } = useSelector(selectPersonData());
 
   /* Actions */
-  const actions = useActions({ getPersonDetail });
+  const actions = useActions({
+    getPersonDetail,
+    getPersonMovieCredits,
+  });
 
   /* Effects */
   useEffect(() => {
     actions.getPersonDetail({ personId });
+    actions.getPersonMovieCredits({ personId });
   }, []);
 
   const childProps = {
     personInfo: personDetail.info,
   };
-  console.log('actorDetail', personDetail);
+
   return (
     <main>
       <div className="container container--full">
@@ -42,7 +47,7 @@ const ActorDetailPage = () => {
             <div className={cx('detailPageDesktopRightSide')}>
               {window.screen.width >= 700 && <DetailPageHeader {...childProps} />}
               <DetailPageInfo {...childProps} />
-              {/* <CastList /> */}
+              <MoviesList />
             </div>
           </div>
         )}
