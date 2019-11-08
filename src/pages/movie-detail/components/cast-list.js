@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 
 import { selectMoviesData } from '#modules/Movies/selectors';
 
-const CastList = () => {
+const CastList = ({ onClick }) => {
   const { movieCredits } = useSelector(selectMoviesData());
   return (
     <div className={styles.castList}>
@@ -15,7 +15,7 @@ const CastList = () => {
       {!movieCredits.isFetching && (
         <div className={styles.list}>
           {movieCredits.info.cast.map(cast => (
-            <CastTile data={cast} />
+            <CastTile data={cast} onClick={onClick} />
           ))}
         </div>
       )}

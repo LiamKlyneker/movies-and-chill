@@ -3,7 +3,7 @@ import cx from 'classnames';
 import { Link } from 'react-router-dom';
 import { Heading, Label } from 'luar-components';
 
-const DetailPageHeader = ({ movieInfo }) => {
+const DetailPageHeader = ({ personInfo }) => {
   return (
     <div className={cx('detailPageHeader')}>
       <div>
@@ -14,8 +14,8 @@ const DetailPageHeader = ({ movieInfo }) => {
         </Link>
       </div>
       <div>
-        <Heading as="h3">{movieInfo.title}</Heading>
-        <Label theme="bold">{movieInfo.tagline.toUpperCase()}</Label>
+        <Heading as="h3">{personInfo.name}</Heading>
+        <Label theme="bold">{personInfo.known_for_department.toUpperCase()}</Label>
       </div>
     </div>
   );

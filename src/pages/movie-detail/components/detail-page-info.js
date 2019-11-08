@@ -3,7 +3,7 @@ import cx from 'classnames';
 
 import { Label, Divider, BodyText } from 'luar-components';
 
-const CharacterDetails = ({ movieInfo }) => {
+const DetailPageInfo = ({ movieInfo }) => {
   return (
     <div className={cx('detailPageInfo')}>
       <Label theme="bold">OVERVIEW</Label>
@@ -35,4 +35,4 @@ const CharacterDetails = ({ movieInfo }) => {
   );
 };
 
-export default CharacterDetails;
+export default DetailPageInfo;
